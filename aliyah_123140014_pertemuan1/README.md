@@ -33,7 +33,7 @@ Berikut adalah beberapa screenshot dari aplikasi yang telah dibuat:
 
 ---
 
-## 🧰 Fitur yang Telah Diimplementasikan
+## ✅ Fitur yang Telah Diimplementasikan
 
 - Struktur halaman menggunakan HTML
 - Styling menggunakan CSS eksternal
@@ -71,7 +71,7 @@ Sebelum data disimpan, dilakukan pengecekan apakah semua field sudah terisi.
     return;
    }
 
-👩‍💻 Dibuat oleh
+## 👩‍💻 Dibuat oleh
 
-Alliyah Salsabilla (123140014)
-Pemrograman Aplikasi Web – RB
+- Alliyah Salsabilla (123140014)
+- Pemrograman Aplikasi Web – RB
