@@ -1,12 +1,7 @@
-# 📚 Aplikasi Manajemen Tugas – Pertemuan 1 Pemrograman Web ITERA
+# 📚 Aplikasi Manajemen Tugas – Praktikum Pemrograman Aplikasi Web
 
 ## 📝 Deskripsi Singkat  
-Aplikasi ini dibuat sebagai latihan dasar dalam mata kuliah **Pemrograman Web**.  
-Fungsinya adalah untuk **mencatat tugas kuliah**, menyimpannya secara lokal menggunakan `localStorage`, serta mengelola data tugas dengan fitur **tambah, edit, hapus, dan tandai selesai**.  
-Aplikasi ini dibangun menggunakan:
-- ✅ HTML untuk struktur halaman  
-- ✅ CSS untuk tampilan yang soft dan rapi  
-- ✅ JavaScript untuk interaksi dan penyimpanan data
+Aplikasi Manajemen Tugas Mahasiswa adalah aplikasi web sederhana untuk membantu mahasiswa mengatur dan memantau tugas kuliah. Pengguna dapat menambahkan, mengedit, menghapus, menandai tugas selesai, serta mencari dan memfilter tugas dengan mudah. Aplikasi ini menyimpan data secara lokal melalui localStorage sehingga informasi tidak hilang saat halaman direfresh atau ditutup.
 
 ---
 
