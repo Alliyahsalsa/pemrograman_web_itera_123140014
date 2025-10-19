@@ -52,15 +52,15 @@ Berikut adalah beberapa screenshot dari aplikasi yang telah dibuat:
 
 Aplikasi menyimpan data tugas menggunakan localStorage sehingga data tidak hilang ketika halaman direfresh.
 
-- Contoh kode menyimpan data:
+- Menyimpan data:
   ```javascript
-   localStorage.setItem("tugas", JSON.stringify(tugasList));
+   localStorage.setItem("tasks", JSON.stringify(tasks));
 
-- Contoh kode mengambil data:
+- Mengambil data:
    ```javascript
-   const tugasList = JSON.parse(localStorage.getItem("tugas")) || [];
+   const savedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
-Validasi Form
+### Validasi Form
 
 Sebelum data disimpan, dilakukan pengecekan apakah semua field sudah terisi.
 
@@ -71,7 +71,7 @@ Sebelum data disimpan, dilakukan pengecekan apakah semua field sudah terisi.
     return;
    }
 
-## 👩‍💻 Dibuat oleh
+## 👩🏻‍💻 Dibuat oleh
 
 - Alliyah Salsabilla (123140014)
 - Pemrograman Aplikasi Web – RB
