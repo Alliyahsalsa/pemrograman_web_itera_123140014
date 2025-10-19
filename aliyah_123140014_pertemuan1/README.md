@@ -16,7 +16,7 @@ Berikut adalah beberapa screenshot dari aplikasi yang telah dibuat:
 <img width="577" height="563" alt="Image" src="https://github.com/user-attachments/assets/245601ad-56ac-48f5-9ee9-89c87043a438" />
 
 **3. Tampilan Daftar Tugas**  
-<img width="700" alt="Tampilan Daftar Tugas" src="https://github.com/user-attachments/assets/5b4c61fa-927e-7dbd5b1e4cd0" />
+<img width="890" height="595" alt="Image" src="https://github.com/user-attachments/assets/691c85ac-0860-48c7-b2d4-5fb205643741" />
 
 ---
 
