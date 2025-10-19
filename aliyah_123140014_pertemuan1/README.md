@@ -7,11 +7,10 @@ Aplikasi Manajemen Tugas Mahasiswa adalah aplikasi web sederhana untuk membantu 
 
 ## 🖼️ Screenshot Aplikasi  
 
-| Tampilan Utama | Form Input | Daftar Tugas |
-|---------------|------------|---------------|
-| ![Tampilan Utama](screenshot1.png) | ![Form Input](screenshot2.png) | ![Daftar Tugas](screenshot3.png) |
+Berikut adalah beberapa screenshot dari aplikasi yang telah dibuat:
 
-> 📝 Ganti `screenshot1.png`, `screenshot2.png`, dan `screenshot3.png` dengan nama file screenshot hasil aplikasi kamu (upload ke folder yang sama dengan README).
+**1. Tampilan Utama Aplikasi**
+<img width="700" height="434" alt="image" src="./a2187e62-25ca-4936-8e44-918c951d1521.png">
 
 ---
 
