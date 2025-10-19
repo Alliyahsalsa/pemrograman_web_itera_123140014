@@ -35,14 +35,13 @@ Berikut adalah beberapa screenshot dari aplikasi yang telah dibuat:
 
 ## ✅ Fitur yang Telah Diimplementasikan
 
-- Struktur halaman menggunakan HTML
-- Styling menggunakan CSS eksternal
 - Validasi form input (nama tugas, matkul, dan deadline wajib diisi)
 - Penyimpanan data ke localStorage
-- Menampilkan data tugas yang tersimpan
-- Fitur edit tugas langsung
+- Menampilkan jumlah tugas belum selesai
+- Fitur edit tugas
 - Fitur hapus tugas
-- Fitur tandai tugas sebagai selesai
+- Fitur tandai tugas sebagai selesai/belum selesai
+- Filter dan pencarian tugas berdasarkan mata kuliah
 
 ---
 
