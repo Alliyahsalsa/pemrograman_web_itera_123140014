@@ -25,3 +25,7 @@ Berikut adalah beberapa screenshot dari aplikasi yang telah dibuat:
 1. **Clone atau download** repository ini ke komputer:
    ```bash
    git clone https://github.com/USERNAME/pemrograman_web_itera_123140014.git
+2. Masuk ke folder project:
+cd aliyah_123140014_pertemuan1
+3. Buka file index.html menggunakan browser (Chrome, Edge, Firefox, dll).
+4. Aplikasi siap digunakan tanpa instalasi tambahan.
