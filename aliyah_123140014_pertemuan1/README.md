@@ -26,6 +26,36 @@ Berikut adalah beberapa screenshot dari aplikasi yang telah dibuat:
    ```bash
    git clone https://github.com/USERNAME/pemrograman_web_itera_123140014.git
 2. Masuk ke folder project:
-cd aliyah_123140014_pertemuan1
+   ```bash
+   cd aliyah_123140014_pertemuan1
 3. Buka file index.html menggunakan browser (Chrome, Edge, Firefox, dll).
 4. Aplikasi siap digunakan tanpa instalasi tambahan.
+
+---
+
+## 🧰 Fitur yang Telah Diimplementasikan
+
+✅ Struktur halaman menggunakan HTML
+✅ Styling menggunakan CSS eksternal
+✅ Validasi form input (nama tugas, matkul, dan deadline wajib diisi)
+✅ Penyimpanan data ke localStorage
+✅ Menampilkan data tugas yang tersimpan
+✅ Fitur edit tugas langsung
+✅ Fitur hapus tugas
+✅ Fitur tandai tugas sebagai selesai
+
+---
+
+## 🛠️ Penjelasan Teknis
+
+### 🧠 Penggunaan localStorage
+
+Aplikasi menyimpan data tugas menggunakan localStorage sehingga data tidak hilang ketika halaman direfresh.
+
+Contoh kode menyimpan data:
+      ```javascript
+localStorage.setItem("tugas", JSON.stringify(tugasList));
+
+Contoh kode mengambil data:
+```javascript
+const tugasList = JSON.parse(localStorage.getItem("tugas")) || [];
