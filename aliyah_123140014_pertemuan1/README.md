@@ -13,7 +13,7 @@ Berikut adalah beberapa screenshot dari aplikasi yang telah dibuat:
 <img width="878" height="485" alt="Image" src="https://github.com/user-attachments/assets/0b96a7d6-3c18-4483-815b-39c6a08e6105" />
 
 **2. Tampilan Form Edit Tugas**  
-<img width="700" alt="Tampilan Form Edit Tugas" src="https://github.com/user-attachments/assets/6cea1812-d75b-4e56-abc3-f2794617aaa3" />
+<img width="577" height="563" alt="Image" src="https://github.com/user-attachments/assets/245601ad-56ac-48f5-9ee9-89c87043a438" />
 
 **3. Tampilan Daftar Tugas**  
 <img width="700" alt="Tampilan Daftar Tugas" src="https://github.com/user-attachments/assets/5b4c61fa-927e-7dbd5b1e4cd0" />
