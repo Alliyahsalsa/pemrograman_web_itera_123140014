@@ -9,8 +9,14 @@ Aplikasi Manajemen Tugas Mahasiswa adalah aplikasi web sederhana untuk membantu 
 
 Berikut adalah beberapa screenshot dari aplikasi yang telah dibuat:
 
-**1. Tampilan Utama Aplikasi**
-<img width="700" height="434" alt="image" src="./a2187e62-25ca-4936-8e44-918c951d1521.png">
+**1. Tampilan Form Tambah Tugas**  
+<img width="700" alt="Tampilan Form Tambah Tugas" src="https://github.com/user-attachments/assets/a2187e62-25ca-4936-8e44-918c951d1521" />
+
+**2. Tampilan Form Edit Tugas**  
+<img width="700" alt="Tampilan Form Edit Tugas" src="https://github.com/user-attachments/assets/6cea1812-d75b-4e56-abc3-f2794617aaa3" />
+
+**3. Tampilan Daftar Tugas**  
+<img width="700" alt="Tampilan Daftar Tugas" src="https://github.com/user-attachments/assets/5b4c61fa-927e-7dbd5b1e4cd0" />
 
 ---
 
