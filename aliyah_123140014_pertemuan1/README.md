@@ -35,27 +35,43 @@ Berikut adalah beberapa screenshot dari aplikasi yang telah dibuat:
 
 ## 🧰 Fitur yang Telah Diimplementasikan
 
-✅ Struktur halaman menggunakan HTML
-✅ Styling menggunakan CSS eksternal
-✅ Validasi form input (nama tugas, matkul, dan deadline wajib diisi)
-✅ Penyimpanan data ke localStorage
-✅ Menampilkan data tugas yang tersimpan
-✅ Fitur edit tugas langsung
-✅ Fitur hapus tugas
-✅ Fitur tandai tugas sebagai selesai
+- Struktur halaman menggunakan HTML
+- Styling menggunakan CSS eksternal
+- Validasi form input (nama tugas, matkul, dan deadline wajib diisi)
+- Penyimpanan data ke localStorage
+- Menampilkan data tugas yang tersimpan
+- Fitur edit tugas langsung
+- Fitur hapus tugas
+- Fitur tandai tugas sebagai selesai
 
 ---
 
 ## 🛠️ Penjelasan Teknis
 
-### 🧠 Penggunaan localStorage
+### Penggunaan localStorage
 
 Aplikasi menyimpan data tugas menggunakan localStorage sehingga data tidak hilang ketika halaman direfresh.
 
-Contoh kode menyimpan data:
-      ```javascript
-localStorage.setItem("tugas", JSON.stringify(tugasList));
+- Contoh kode menyimpan data:
+  ```javascript
+   localStorage.setItem("tugas", JSON.stringify(tugasList));
 
-Contoh kode mengambil data:
-```javascript
-const tugasList = JSON.parse(localStorage.getItem("tugas")) || [];
+- Contoh kode mengambil data:
+   ```javascript
+   const tugasList = JSON.parse(localStorage.getItem("tugas")) || [];
+
+Validasi Form
+
+Sebelum data disimpan, dilakukan pengecekan apakah semua field sudah terisi.
+
+- Contoh:
+   ```javascript
+   if (namaTugas.value.trim() === "" || matkul.value.trim() === "" || deadline.value === "") {
+    alert("Harap isi semua field sebelum menyimpan!");
+    return;
+   }
+
+👩‍💻 Dibuat oleh
+
+Alliyah Salsabilla (123140014)
+Pemrograman Aplikasi Web – RB
