@@ -2,19 +2,18 @@
 
 ## 📌 Deskripsi Singkat
 Aplikasi Personal Productivity Dashboard membantu pengguna mengelola aktivitas harian dengan lebih efisien.  
-Pengguna dapat menambah, mengedit, dan menghapus tugas atau to-do list, serta memantau waktu melalui jam digital dan kalender otomatis.  
-Seluruh data pengguna tersimpan menggunakan LocalStorage, sehingga informasi tetap tersimpan meskipun halaman ditutup.
+Pengguna dapat menambah, mengedit, dan menghapus tugas atau to-do list, serta memantau waktu melalui jam digital dan kalender otomatis. Seluruh data pengguna tersimpan menggunakan LocalStorage, sehingga informasi tetap tersimpan meskipun halaman ditutup.
 
 ---
 
 ## 🖼️ Screenshot Aplikasi
-- Halaman Dashboard
+- **Halaman Dashboard**
 <img width="1919" height="991" alt="image" src="https://github.com/user-attachments/assets/df90d5a0-f6dc-4061-a794-3cc21f3751a6" />
 
-- Halaman Jadwal Kuliah
+- **Halaman Jadwal Kuliah**
 <img width="1919" height="991" alt="image" src="https://github.com/user-attachments/assets/3a7fd35b-06a5-4f8a-9588-fb9718e6f202" />
 
-- Halaman Daftar tugas
+- **Halaman Daftar Tugas**
 <img width="1919" height="995" alt="image" src="https://github.com/user-attachments/assets/0f9db908-3956-468e-84df-efc310ecd671" />
 
 ---
