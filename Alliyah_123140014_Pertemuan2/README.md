@@ -38,6 +38,8 @@ Pengguna dapat menambah, mengedit, dan menghapus tugas atau to-do list, serta me
     }
   }
 
+---
+
 ## 🚀 Fitur ES6+ yang Diimplementasikan
 1. let & const
 Digunakan untuk deklarasi variabel modern yang lebih aman dan terkontrol.
