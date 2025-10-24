@@ -24,7 +24,6 @@ Pengguna dapat menambah, mengedit, dan menghapus tugas atau to-do list, serta me
   - Mengedit tugas yang sudah ada.
   - Menghapus tugas.
 - Semua perubahan langsung diperbarui di tampilan secara real-time tanpa refresh halaman.
-
   ```js
   function tambahTugas() {
     const matkul = document.getElementById("matkul").value;
@@ -42,11 +41,10 @@ Pengguna dapat menambah, mengedit, dan menghapus tugas atau to-do list, serta me
 
 ## 💾 Penyimpanan Lokal
 - Data tugas dan to-do list disimpan menggunakan LocalStorage, sehingga data tidak hilang setelah halaman ditutup.
-    ```js
-    
-    let tugas = JSON.parse(localStorage.getItem("tugas")) || [];
+  ```js
+  let tugas = JSON.parse(localStorage.getItem("tugas")) || [];
 
-    localStorage.setItem("tugas", JSON.stringify(tugas));
+  localStorage.setItem("tugas", JSON.stringify(tugas));
 
 ---
 
