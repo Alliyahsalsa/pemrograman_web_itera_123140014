@@ -8,7 +8,14 @@ Seluruh data pengguna tersimpan menggunakan LocalStorage, sehingga informasi tet
 ---
 
 ## 🖼️ Screenshot Aplikasi
-![Personal Dashboard Screenshot](A_personal_productivity_dashboard_in_a_2D_digital_.png)
+- Halaman Dashboard
+<img width="1919" height="991" alt="image" src="https://github.com/user-attachments/assets/df90d5a0-f6dc-4061-a794-3cc21f3751a6" />
+
+- Halaman Jadwal Kuliah
+<img width="1919" height="991" alt="image" src="https://github.com/user-attachments/assets/3a7fd35b-06a5-4f8a-9588-fb9718e6f202" />
+
+- Halaman Daftar tugas
+<img width="1919" height="995" alt="image" src="https://github.com/user-attachments/assets/0f9db908-3956-468e-84df-efc310ecd671" />
 
 ---
 
