@@ -19,8 +19,6 @@ Pengguna dapat menambah, mengedit, dan menghapus tugas atau to-do list, serta me
 ---
 
 ## ⚙️ Implementasi Persyaratan
-
-### 🧩 Interaktif
 - Pengguna bisa:
   - Menambahkan tugas baru.
   - Mengedit tugas yang sudah ada.
