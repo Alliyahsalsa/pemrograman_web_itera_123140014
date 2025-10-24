@@ -1,9 +1,9 @@
 # 🧭 Personal Productivity Dashboard
 
 ## 📌 Deskripsi Singkat
-Aplikasi **Personal Productivity Dashboard** membantu pengguna mengelola aktivitas harian dengan lebih efisien.  
-Pengguna dapat **menambah, mengedit, dan menghapus** tugas atau to-do list, serta memantau waktu melalui **jam digital** dan **kalender otomatis**.  
-Seluruh data pengguna tersimpan menggunakan **LocalStorage**, sehingga informasi tetap tersimpan meskipun halaman ditutup.
+Aplikasi Personal Productivity Dashboard membantu pengguna mengelola aktivitas harian dengan lebih efisien.  
+Pengguna dapat menambah, mengedit, dan menghapus tugas atau to-do list, serta memantau waktu melalui jam digital dan kalender otomatis.  
+Seluruh data pengguna tersimpan menggunakan LocalStorage, sehingga informasi tetap tersimpan meskipun halaman ditutup.
 
 ---
 
