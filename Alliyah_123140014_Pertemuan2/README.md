@@ -41,8 +41,7 @@ Pengguna dapat menambah, mengedit, dan menghapus tugas atau to-do list, serta me
 ---
 
 ## 💾 Penyimpanan Lokal
-Data tugas dan to-do list disimpan menggunakan LocalStorage, sehingga data tidak hilang setelah halaman ditutup.
-
+- Data tugas dan to-do list disimpan menggunakan LocalStorage, sehingga data tidak hilang setelah halaman ditutup.
     ```js
     
     let tugas = JSON.parse(localStorage.getItem("tugas")) || [];
