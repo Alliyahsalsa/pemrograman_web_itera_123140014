@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h2>Menu</h2>
+      <ul>
+        <li><a href="#" class="active" onclick="showPage('dashboard')">Dashboard</a></li>
+        <li><a href="#" onclick="showPage('jadwal')">Jadwal Kuliah</a></li>
+        <li><a href="#" onclick="showPage('tugas')">Daftar Tugas</a></li>
+      </ul>
+    </div>
+
+    <!-- Konten Utama -->
+    <div class="content">
+      <header>
+        <h1>Personal Dashboard</h1>
+        <div id="clock"></div>
+      </header>
+
+      <!-- Halaman Dashboard -->
+      <div id="dashboard" class="page active">
+        <p class="welcome">Selamat Datang, <b>Alliyah Salsabilla</b> 👋</p>
+
+        <div class="dashboard-boxes">
+          <div class="box pink">
+            Total Tugas
+            <p id="totalTugas">0</p>
+          </div>
+          <div class="box green">
+            Selesai
+            <p id="tugasSelesai">0</p>
+          </div>
+          <div class="box red">
+            Belum Selesai
+            <p id="tugasBelum">0</p>
+          </div>
+        </div>
+
+        <div class="todo-section">
+          <h2>To-Do List Harian</h2>
+          <div class="todo-input">
+            <input type="text" id="todoInput" placeholder="Tambahkan kegiatan harian..." />
+            <button onclick="addTodo()">Tambah</button>
+          </div>
+          <ul id="todoList"></ul>
+        </div>
+      </div>
+
+      <!-- Halaman Jadwal Kuliah -->
+      <div id="jadwal" class="page active">
+        <h2>Jadwal Kuliah</h2>
+        <form id="jadwalForm">
+          <input type="text" id="mataKuliah" placeholder="Mata Kuliah" required>
+          <input type="text" id="hariKuliah" placeholder="Hari" required>
+          <input type="time" id="waktuMulai" required>
+          <input type="time" id="waktuSelesai" required>
+          <input type="text" id="ruanganKuliah" placeholder="Ruangan" required>
+          <button type="submit" class="add-btn">Tambah</button>
+         </form>
+        <ul id="jadwalList" class="jadwal-list"></ul>
+      </div>
+
+      <!-- Halaman Daftar Tugas -->
+      <div id="tugas" class="page">
+        <div class="daftar-tugas-header">
+          <h2>Daftar Tugas</h2>
+          <button class="tambah-tugas-btn" onclick="tampilkanFormTambah()">+ Tambah</button>
+        </div>
+        <div id="tugasList"></div>
+
+        <!-- Form Tambah/Edit -->
+        <div id="editFormContainer" class="edit-form hidden">
+          <h3 id="formTitle">Tambah Tugas</h3>
+          <input type="text" id="editMatkul" placeholder="Mata Kuliah" />
+          <input type="text" id="editNama" placeholder="Nama Tugas" />
+          <input type="date" id="editTanggal" />
+          <div class="edit-buttons">
+            <button onclick="simpanTugas()">Simpan</button>
+            <button onclick="batalEdit()">Batal</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    
+    // Update waktu + tanggal realtime di header
+    function updateClock() {
+      const now = new Date();
+      const hari = now.toLocaleDateString('id-ID', { weekday: 'long' });
+      const tanggal = now.toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' });
+      const waktu = now.toLocaleTimeString('id-ID', { hour12: false });
+      document.getElementById("clock").innerText = `${hari}, ${tanggal} | ${waktu}`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
+</body>
+</html>
