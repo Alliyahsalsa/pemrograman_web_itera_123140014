@@ -105,3 +105,7 @@ Digunakan untuk membuat struktur data tugas agar lebih terorganisir.
       localStorage.setItem("tugas", JSON.stringify(tugas));
       renderTugas();
     };
+
+## 👩🏻‍💻 Dibuat oleh
+- Alliyah Salsabilla (123140014)
+- Pemrograman Aplikasi Web – RB
