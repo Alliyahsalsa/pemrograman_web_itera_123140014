@@ -1,0 +1,40 @@
+.filter-panel-wrapper { 
+    background-color: var(--pink-bg-color); 
+    padding: 2rem 2.5rem;
+    border-radius: var(--pink-radius); 
+    box-shadow: none;
+    margin-bottom: 2.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 40px;
+    border: 1px solid var(--pink-border-color);
+}
+
+.filter-control-area {
+    display: contents; 
+}
+
+.input-group-field {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    gap: 15px; 
+    flex: 1; 
+    min-width: unset;
+}
+
+.input-group-field label {
+    font-weight: 700; 
+    font-size: 0.85rem;
+    text-transform: uppercase; 
+    flex-shrink: 0;
+    min-width: 80px;
+}
+
+.text-search-input, .custom-select-input {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: 2px solid var(--pink-border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+}

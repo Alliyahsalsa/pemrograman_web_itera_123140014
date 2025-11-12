@@ -1,0 +1,54 @@
+:root {
+  --pink-primary-color: #f7a6b7; 
+  --pink-dark-color: #594754; 
+  --pink-bg-color: #ffffff; 
+  --pink-border-color: #fce8ed; 
+}
+
+.main-app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2.5rem;
+    background-color: var(--pink-bg-color); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 0;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid var(--pink-border-color);
+}
+
+.brand-title-text { 
+    margin: 0;
+    color: var(--pink-dark-color);
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-shadow: none;
+    letter-spacing: -0.5px;
+}
+
+.navigation-menu-links { 
+    display: flex;
+    gap: 1.5rem; 
+}
+
+.navigation-menu-links a {
+    color: var(--pink-dark-color);
+    text-decoration: none;
+    padding: 0.5rem 0; 
+    border-radius: 0; 
+    transition: color 0.2s;
+    font-weight: 600;
+    position: relative;
+    background-color: transparent;
+    border-bottom: 3px solid transparent; 
+}
+
+.nav-item-link:hover {
+    color: var(--pink-primary-color); 
+    border-bottom: 3px solid var(--pink-border-color);
+}
+
+.nav-item-active {
+    color: var(--pink-primary-color);
+    border-bottom: 3px solid var(--pink-primary-color);
+}

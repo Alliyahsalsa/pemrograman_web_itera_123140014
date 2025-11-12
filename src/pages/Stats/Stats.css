@@ -1,0 +1,76 @@
+.metrics-dashboard h2.dashboard-title { 
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #d81b60;
+  text-shadow: 2px 2px 4px rgba(216, 27, 96, 0.1);
+}
+
+.metrics-grid { 
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+.stat-display { 
+  background: linear-gradient(135deg, #fff 0%, #ffebee 100%);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(244, 143, 177, 0.15);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.stat-display:hover { 
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 35px rgba(244, 143, 177, 0.25);
+}
+
+.icon-background {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.stat-display h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.1rem;
+  color: #880e4f;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-display p.metric-value { 
+  margin: 0;
+  font-size: 3.5rem;
+  font-weight: 900;
+}
+
+.stat-display.total-count .icon-background { 
+  background: linear-gradient(135deg, #f06292, #ec407a);
+}
+.stat-display.total-count p { color: #d81b60; }
+
+.stat-display.owned-count .icon-background { 
+  background: linear-gradient(135deg, #66bb6a, #4caf50);
+}
+.stat-display.owned-count p { color: #2e7d32; }
+
+.stat-display.reading-count .icon-background { 
+  background: linear-gradient(135deg, #ffa726, #ff9800);
+}
+.stat-display.reading-count p { color: #e65100; }
+
+.stat-display.purchase-count .icon-background { 
+  background: linear-gradient(135deg, #ba68c8, #ab47bc);
+}
+.stat-display.purchase-count p { color: #7b1fa2; }
