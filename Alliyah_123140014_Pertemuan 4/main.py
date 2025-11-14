@@ -1,35 +1,35 @@
 # 1. Data Mahasiswa
 data_mahasiswa = [
     {
-        'nama': 'Andi Susanto',
+        'nama': 'Fajar Kurniawan',
         'NIM': '210101001',
         'nilai_uts': 50,
         'nilai_uas': 40,
         'nilai_tugas': 55
     },
     {
-        'nama': 'Budi Cahyadi',
+        'nama': 'Hendra Wijaya',
         'NIM': '210101002',
         'nilai_uts': 60,
         'nilai_uas': 70,
         'nilai_tugas': 80
     },
     {
-        'nama': 'Citra Kirana',
+        'nama': 'Gita Paramitha',
         'NIM': '210101003',
         'nilai_uts': 95,
         'nilai_uas': 88,
         'nilai_tugas': 92
     },
     {
-        'nama': 'Dewi Sari',
+        'nama': 'Kania Dewi',
         'NIM': '210101004',
         'nilai_uts': 60,
         'nilai_uas': 65,
         'nilai_tugas': 78
     },
     {
-        'nama': 'Eko Prasetyo',
+        'nama': 'Lucky Firmansyah',
         'NIM': '210101005',
         'nilai_uts': 45,
         'nilai_uas': 55,
@@ -37,7 +37,7 @@ data_mahasiswa = [
     }
 ]
 
-# --- 2. Fungsi yang Harus Dibuat ---
+# 2. Fungsi yang Harus Dibuat
 
 def hitung_nilai_akhir(uts, uas, tugas):
     """Menghitung Nilai Akhir dengan bobot: 30% UTS + 40% UAS + 30% Tugas."""
@@ -120,7 +120,7 @@ def cari_mahasiswa_ekstrem(data, tipe='tertinggi'):
     print(f"  Nilai Akhir: {mahasiswa_ekstrem['nilai_akhir']:.2f}")
 
 
-# --- 3. Fitur Tambahan ---
+# 3. Fitur Tambahan
 
 def input_data_mahasiswa_baru(data):
     """Input data mahasiswa baru."""
@@ -200,7 +200,7 @@ def hitung_rata_rata_nilai_kelas(data):
     print(f"Rata-rata Nilai Akhir Kelas: **{rata_rata:.2f}**")
 
 
-# --- Implementasi Program Utama ---
+# Implementasi Program Utama
 
 def main():
     """Fungsi utama untuk menjalankan program secara keseluruhan."""
