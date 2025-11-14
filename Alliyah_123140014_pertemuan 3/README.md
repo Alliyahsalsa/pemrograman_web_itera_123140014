@@ -1,17 +1,17 @@
-# 📖 Catatan Buku Saya - Aplikasi Manajemen Inventaris Buku
+# Aplikasi Manajemen Buku Pribadi
 Aplikasi web berbasis React untuk mengelola koleksi buku pribadi dengan antarmuka yang menarik. Fitur lengkap dengan CRUD operations, filtering, pencarian, dan statistik.
 
-## 📋 Deskripsi Aplikasi
+## Deskripsi Aplikasi
 **Catatan Buku Saya** adalah Single Page Application (SPA) yang memungkinkan pengguna untuk:
-- ✨ Menambahkan buku baru ke inventaris
-- ✏️ Mengedit informasi buku yang sudah ada
-- 🗑️ Menghapus buku dari daftar
-- 🔍 Mencari buku berdasarkan judul atau penulis
-- 🏷️ Memfilter buku berdasarkan status (Dimiliki, Sedang Dibaca, Akan Dibeli)
-- 📊 Melihat statistik koleksi buku secara real-time
+- Menambahkan buku baru ke inventaris
+- Mengedit informasi buku yang sudah ada
+- Menghapus buku dari daftar
+- Mencari buku berdasarkan judul atau penulis
+- Memfilter buku berdasarkan status (Dimiliki, Sedang Dibaca, Akan Dibeli)
+- Melihat statistik koleksi buku secara real-time
 Data disimpan secara otomatis di **Local Storage** sehingga tetap tersedia meskipun browser ditutup.
 
-## 🚀 Instruksi Instalasi dan Menjalankan
+## Instruksi Instalasi dan Menjalankan
 ### Prerequisites
 Pastikan sudah terinstall:
 - **Node.js** versi 14 atau lebih baru ([Download](https://nodejs.org/))
@@ -52,7 +52,7 @@ npm test
 ### Fitur Filter dan Pencarian
 *[hasil ss]*
 
-## ⚛️ Penjelasan Fitur React yang Digunakan
+## Penjelasan Fitur React yang Digunakan
 ### 1. **React Hooks**
 - **useState** - Mengelola state lokal (form data, filter, modal)
 - **useEffect** - Sinkronisasi dengan localStorage dan load data saat edit
@@ -82,7 +82,7 @@ Render berbeda berdasarkan kondisi (empty state, modal visibility, filter result
 
 ---
 
-## 🧪 Laporan Testing
+## Laporan Testing
 ### Test Suite Overview
 Aplikasi dilengkapi dengan automated testing menggunakan **Jest** dan **React Testing Library**.
 **Total Test Cases: 5**
