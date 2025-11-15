@@ -1,34 +1,32 @@
 import abc
 
 # --- 1. ABSTRACT CLASS: LibraryItem ---
-
 class LibraryItem(abc.ABC):
-    """Kelas Abstrak dasar untuk semua item di perpustakaan."""
+    """Kelas Abstrak dasar yang mendefinisikan struktur item perpustakaan."""
     
     def __init__(self, title, item_id):
-        # Menerapkan Encapsulation (protected access modifier)
         self._title = title 
         self._item_id = item_id
         self._is_available = True
 
     @property
     def title(self):
-        """Property Decorator untuk mengakses judul (read-only)."""
+        """Property Decorator untuk Judul."""
         return self._title
 
     @property
     def item_id(self):
-        """Property Decorator untuk mengakses ID (read-only)."""
+        """Property Decorator untuk ID."""
         return self._item_id
 
     @abc.abstractmethod
     def display_info(self):
-        """Method abstrak (Polymorphism) untuk detail info item."""
+        """Method abstrak untuk detail info item (Polymorphism)."""
         pass
 
     @abc.abstractmethod
     def check_status(self):
-        """Method abstrak untuk implementasi status."""
+        """Method abstrak."""
         pass
 
     def get_status(self):
@@ -41,15 +39,13 @@ class LibraryItem(abc.ABC):
 
 
 # --- 2. SUBCLASS 1: Book (Buku) ---
-
 class Book(LibraryItem):
     """Subclass untuk item bertipe Buku."""
-    def __init__(self, title, item_id, author, isbn):
+    
+    def __init__(self, title, item_id, author, pages): 
         super().__init__(title, item_id)
         self._author = author
-        self._isbn = isbn
-        
-        # Contoh property decorator read/write
+        self._pages = pages
         self._penerbit = "Unassigned" 
 
     @property
@@ -63,20 +59,20 @@ class Book(LibraryItem):
         self._penerbit = new_penerbit
         
     def display_info(self):
-        """Menampilkan info spesifik Buku."""
+        """Method ini tetap ada untuk Polymorphism, menampilkan info lengkap."""
         print(f"\n[📚 Buku]")
         print(f"  ID: {self._item_id}")
         print(f"  Judul: {self._title}")
         print(f"  Penulis: {self._author}")
-        print(f"  ISBN: {self._isbn}")
+        print(f"  Halaman: {self._pages}")
         print(f"  Penerbit: {self.penerbit}")
         print(f"  Status: {self.get_status()}")
 
     def check_status(self):
         return self.get_status()
 
-# --- 3. SUBCLASS 2: Magazine (Majalah) ---
 
+# --- 3. SUBCLASS 2: Magazine (Majalah) ---
 class Magazine(LibraryItem):
     """Subclass untuk item bertipe Majalah."""
     def __init__(self, title, item_id, issue_number, year):
@@ -85,7 +81,7 @@ class Magazine(LibraryItem):
         self._year = year
 
     def display_info(self):
-        """Menampilkan info spesifik Majalah."""
+        """Method ini tetap ada untuk Polymorphism, menampilkan info lengkap."""
         print(f"\n[📰 Majalah]")
         print(f"  ID: {self._item_id}")
         print(f"  Judul: {self._title}")
@@ -96,42 +92,57 @@ class Magazine(LibraryItem):
     def check_status(self):
         return self.get_status()
 
-# --- 4. CLASS: Library (Manajemen Koleksi) ---
 
+# --- 4. CLASS: Library (Manajemen Koleksi) ---
 class Library:
     """Kelas untuk mengelola koleksi LibraryItem."""
     def __init__(self):
-        # Menerapkan Encapsulation (private access modifier)
         self.__collection = []
-        self.__next_id = 101 # ID awal untuk item baru
+        self.__next_book_num = 101 
+        self.__next_magazine_num = 201
 
-    @property
-    def next_id(self):
-        return self.__next_id
+    def generate_book_id(self):
+        """Membuat ID Buku dengan prefix 'B'."""
+        book_id = f"B{self.__next_book_num}"
+        self.__next_book_num += 1
+        return book_id
+
+    def generate_magazine_id(self):
+        """Membuat ID Majalah dengan prefix 'M'."""
+        magazine_id = f"M{self.__next_magazine_num}"
+        self.__next_magazine_num += 1
+        return magazine_id
         
     def add_item(self, item):
         """Menambahkan item ke dalam koleksi."""
         if isinstance(item, LibraryItem):
             self.__collection.append(item)
-            self.__next_id += 1
             print(f"\n✅ Item '{item.title}' (ID: {item.item_id}) berhasil ditambahkan.")
         else:
             print("\n❌ Gagal menambahkan item.")
 
     def display_all_items(self):
-        """Menampilkan daftar semua item yang tersedia dalam koleksi."""
+        """Menampilkan daftar semua item dalam koleksi (ID, Judul, Status, dan Total Item)."""
         if not self.__collection:
-            print("\n[!] Koleksi perpustakaan kosong. Silakan tambahkan item baru terlebih dahulu.")
+            print("\nKoleksi perpustakaan kosong. Silakan tambahkan item baru terlebih dahulu!")
             return
 
-        print("\n==============================================")
-        print("     📚 DAFTAR KOLEKSI PERPUSTAKAAN")
-        print("==============================================")
+        print("\n=================================================")
+        print("         📚 DAFTAR KOLEKSI PERPUSTAKAAN")
+        print("=================================================")
         
-        # Menerapkan Polymorphism
+        # Header List
+        print(f"{'ID':<8} | {'Judul':<35} | Status")
+        print("-" * 60)
+        
         for item in self.__collection:
-            item.display_info()
-            print("-" * 40)
+            # Tampilkan dalam format list sederhana
+            print(f"{item.item_id:<8} | {item.title:<35} | {item.get_status()}")
+            
+        print("-" * 60)
+        # Menampilkan Total Item
+        print(f"Total Item: {len(self.__collection)}") 
+
 
     def search_item(self, query):
         """Mencari item berdasarkan Judul atau ID."""
@@ -139,18 +150,18 @@ class Library:
         query_lower = str(query).lower()
 
         for item in self.__collection:
-            if query_lower in item.title.lower() or query_lower == str(item.item_id).lower():
+            if query_lower in item.title.lower() or query_lower == item.item_id.lower():
                 found_items.append(item)
 
         if found_items:
             print(f"\n--- Hasil Pencarian untuk '{query}' ({len(found_items)} item ditemukan) ---")
-            # Polymorphism digunakan untuk menampilkan info yang benar
             for item in found_items:
                 item.display_info()
                 print("-" * 40)
         else:
-            print(f"\n[!] Item dengan Judul/ID '{query}' tidak ditemukan.")
+            print(f"\nItem dengan Judul/ID '{query}' tidak ditemukan!")
             
+
 # --- 5. FUNGSI INTERAKTIF DAN MENU ---
 
 def input_book(library):
@@ -158,16 +169,19 @@ def input_book(library):
     print("\n--- ➕ Tambah Buku Baru ---")
     title = input("Masukkan Judul Buku: ")
     author = input("Masukkan Penulis: ")
-    isbn = input("Masukkan ISBN: ")
     
-    # ID otomatis
-    item_id = library.next_id
+    try:
+        pages = int(input("Masukkan Jumlah Halaman: "))
+    except ValueError:
+        print("\n❌ Input Jumlah Halaman harus berupa angka.")
+        return
     
-    # Buat objek dan tambahkan
-    new_book = Book(title, item_id, author, isbn)
+    item_id = library.generate_book_id()
+    print(f"ID Item: {item_id}")
     
-    # Input tambahan untuk Property Decorator
-    penerbit = input("Masukkan Penerbit (kosongkan jika tidak tahu): ")
+    new_book = Book(title, item_id, author, pages)
+    
+    penerbit = input("Masukkan Penerbit: ")
     if penerbit:
         new_book.penerbit = penerbit
         
@@ -186,10 +200,9 @@ def input_magazine(library):
         print("\n❌ Input Edisi dan Tahun harus berupa angka.")
         return
 
-    # ID otomatis
-    item_id = library.next_id
-    
-    # Buat objek dan tambahkan
+    item_id = library.generate_magazine_id()
+    print(f"ID Item: {item_id}")
+
     new_magazine = Magazine(title, item_id, issue, year)
     library.add_item(new_magazine)
 
@@ -199,16 +212,14 @@ def search_and_modify_status(library):
     query = input("\nMasukkan Judul atau ID item yang ingin diubah statusnya: ")
     found_items = []
 
-    # Cari item
-    for item in library._Library__collection: # Mengakses atribut private untuk pencarian internal
-        if query.lower() in item.title.lower() or query.lower() == str(item.item_id).lower():
+    for item in library._Library__collection: 
+        if query.lower() in item.title.lower() or query.lower() == item.item_id.lower():
             found_items.append(item)
     
     if not found_items:
-        print(f"\n[!] Item dengan query '{query}' tidak ditemukan.")
+        print(f"\nItem dengan query '{query}' tidak ditemukan!")
         return
 
-    # Jika hanya satu item ditemukan
     if len(found_items) == 1:
         item = found_items[0]
         item.display_info()
@@ -218,24 +229,24 @@ def search_and_modify_status(library):
         
         if new_status_input == 'tersedia':
             item.set_availability(True)
-            print(f"\n✅ Status '{item.title}' berhasil diubah menjadi TERSISA.")
+            print(f"\n✅ Status '{item.title}' ({item.item_id}) berhasil diubah menjadi TERSEDIA.")
         elif new_status_input == 'pinjam':
             item.set_availability(False)
-            print(f"\n✅ Status '{item.title}' berhasil diubah menjadi DIPINJAM.")
+            print(f"\n✅ Status '{item.title}' ({item.item_id}) berhasil diubah menjadi DIPINJAM.")
         else:
             print("\n❌ Input status tidak valid. Gunakan 'Tersedia' atau 'Pinjam'.")
     else:
-        print("\n[!] Ditemukan lebih dari satu item. Mohon gunakan query yang lebih spesifik.")
+        print("\nDitemukan lebih dari satu item. Mohon gunakan query yang lebih spesifik!")
 
 
 def main():
-    """Fungsi utama untuk menjalankan menu interaktif."""
+    """Fungsi utama untuk menjalankan program."""
     
     my_library = Library()
 
     while True:
         print("\n==============================================")
-        print(" 🏛️  SISTEM MANAJEMEN PERPUSTAKAAN (OOP)")
+        print("🏛️  SISTEM MANAJEMEN PERPUSTAKAAN")
         print("==============================================")
         print("Pilih Menu:")
         print("1. Tampilkan Semua Koleksi")
@@ -263,7 +274,7 @@ def main():
             print("\nTerima kasih, program selesai.")
             break
         else:
-            print("\n[!] Pilihan tidak valid. Silakan masukkan angka 1 sampai 6.")
+            print("\nPilihan tidak valid. Silakan masukkan angka 1 sampai 6!")
 
 if __name__ == "__main__":
     main()
