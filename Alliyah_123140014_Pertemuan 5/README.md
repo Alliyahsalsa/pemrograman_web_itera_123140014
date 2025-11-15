@@ -1,4 +1,4 @@
-# 📚 README.md: Sistem Manajemen Perpustakaan Sederhana (OOP Python)
+# Sistem Manajemen Perpustakaan Sederhana
 
 ### 1. Deskripsi Program dan Fitur Utama
 
@@ -29,21 +29,32 @@ Program ini berfokus pada penerapan konsep OOP Python sebagai berikut:
 
 ---
 
-### 3. Screenshot Hasil Running Program
+### 3. Tampilan Program
 
 Berikut adalah tampilan dari program saat dijalankan, yang menunjukkan berbagai fungsionalitas utama:
 
-#### **3.1 Menu Utama dan Tampilan Koleksi**
+#### **Menu Utama dan Tampilan Koleksi**
+<img width="886" height="563" alt="image" src="https://github.com/user-attachments/assets/04f09d0d-edcb-4215-b055-5f176b2a9e40" />
 
-#### **3.2 Penambahan Item Baru (Contoh Buku)**
+#### **Penambahan Item Baru (Contoh Buku)**
+<img width="1003" height="561" alt="image" src="https://github.com/user-attachments/assets/ea29c02a-1707-47be-9849-407f7dc64a00" />
 
-#### **3.3 Perubahan Status Ketersediaan**
+#### **Penambahan Item Baru (Contoh Majalah)**
+<img width="881" height="565" alt="image" src="https://github.com/user-attachments/assets/fa671cc8-177a-4cf6-a924-c172f936b4de" />
+
+#### **Pencarian Item Berdasarkan Judul/ID**
+- **Berdasarkan ID**
+<img width="950" height="681" alt="image" src="https://github.com/user-attachments/assets/9760516c-33fa-4c14-b091-4dece5667edc" />
+
+- **Berdasarkan Judul**
+<img width="935" height="646" alt="image" src="https://github.com/user-attachments/assets/2636185c-61c2-4c8b-8146-844f7354950b" />
+
+#### **Perubahan Status Ketersediaan**
+<img width="952" height="577" alt="image" src="https://github.com/user-attachments/assets/84596535-1045-4e6b-91e9-962602d28ff6" />
 
 ---
 
 ### 4. Diagram Kelas (Class Diagram)
-
-*(Bagian ini bersifat opsional dan dapat Anda buat menggunakan alat seperti PlantUML atau draw.io jika Anda ingin menambah nilai tugas.)*
 
 Program ini terdiri dari struktur tiga kelas utama:
 
@@ -59,4 +70,3 @@ Program ini terdiri dari struktur tiga kelas utama:
 * **`Library`**
     * *Attributes*: `__collection`, `__next_book_num`, `__next_magazine_num`
     * *Methods*: `generate_book_id()`, `generate_magazine_id()`, `add_item()`, `display_all_items()`, `search_item()`
-```
