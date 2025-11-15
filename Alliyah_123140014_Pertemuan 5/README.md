@@ -33,7 +33,7 @@ Program ini berfokus pada penerapan konsep OOP Python sebagai berikut:
 
 Berikut adalah tampilan dari program saat dijalankan, yang menunjukkan berbagai fungsionalitas utama:
 
-#### **Menu Utama dan Tampilan Koleksi**
+#### **Tampilan Koleksi**
 <img width="886" height="563" alt="image" src="https://github.com/user-attachments/assets/04f09d0d-edcb-4215-b055-5f176b2a9e40" />
 
 #### **Penambahan Item Baru (Contoh Buku)**
