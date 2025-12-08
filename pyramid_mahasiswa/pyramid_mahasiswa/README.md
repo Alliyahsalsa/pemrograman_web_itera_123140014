@@ -136,6 +136,8 @@ curl -X GET http://localhost:6543/api/mahasiswa
 }
 ```
 
+![gambar get all mahasiswa](<Screenshot 2025-12-08 193743.png>)
+
 ### 2\. Get Mahasiswa By ID
 
 Mengambil data detail satu mahasiswa berdasarkan ID.
