@@ -1,10 +1,8 @@
 # Pyramid Mahasiswa API
 
-Proyek ini adalah aplikasi web RESTful API sederhana yang dibangun menggunakan **Pyramid Framework**. Aplikasi ini berfungsi untuk mengelola data Mahasiswa (CRUD) menggunakan database **PostgreSQL** dan ORM **SQLAlchemy**.
-
----
-
 ## 1. Deskripsi Proyek
+
+Proyek ini adalah aplikasi web RESTful API sederhana yang dibangun menggunakan **Pyramid Framework**. Aplikasi ini berfungsi untuk mengelola data Mahasiswa (CRUD) menggunakan database **PostgreSQL** dan ORM **SQLAlchemy**.
 
 Aplikasi ini menyediakan layanan backend untuk manajemen data mahasiswa.
 Teknologi yang digunakan:
