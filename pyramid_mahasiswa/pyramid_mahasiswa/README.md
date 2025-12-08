@@ -1,8 +1,3 @@
-Tentu, saya mengerti. Anda ingin bagian **API Endpoints** dibuat sangat detail, menampilkan setiap *endpoint* satu per satu lengkap dengan contoh **Request** (perintah `curl`) dan **Response** (JSON)-nya, persis seperti contoh gambar yang Anda kirimkan.
-
-Berikut adalah revisi lengkap **`README.md`** yang sudah disesuaikan agar rapi dan siap *copy-paste* ke GitHub:
-
-````markdown
 # Pyramid Mahasiswa API
 
 Proyek ini adalah aplikasi web RESTful API sederhana yang dibangun menggunakan **Pyramid Framework**. Aplikasi ini berfungsi untuk mengelola data Mahasiswa (CRUD) menggunakan database **PostgreSQL** dan ORM **SQLAlchemy**.
