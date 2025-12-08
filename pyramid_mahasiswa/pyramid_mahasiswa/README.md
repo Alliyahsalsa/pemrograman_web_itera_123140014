@@ -131,7 +131,9 @@ curl -X GET http://localhost:6543/api/mahasiswa
 }
 ```
 
-![gambar get all mahasiswa](<Screenshot 2025-12-08 193743.png>)
+<img width="1212" height="226" alt="Screenshot 2025-12-08 193743" src="https://github.com/user-attachments/assets/bbac371b-2a7c-4945-960c-512d1768ac70" />
+
+-----
 
 ### 2\. Get Mahasiswa By ID
 
@@ -155,6 +157,10 @@ curl -X GET http://localhost:6543/api/mahasiswa/1
   "alamat": "Jl. Merdeka No. 123, Bandung"
 }
 ```
+
+<img width="1225" height="188" alt="Screenshot 2025-12-08 193734" src="https://github.com/user-attachments/assets/fc07a816-949b-4196-99c2-ce8090548c82" />
+
+-----
 
 ### 3\. Create New Mahasiswa
 
@@ -184,6 +190,10 @@ curl -X POST http://localhost:6543/api/mahasiswa \
 }
 ```
 
+<img width="1215" height="353" alt="Screenshot 2025-12-08 193720" src="https://github.com/user-attachments/assets/3c2f0a2f-9162-4e11-a588-0259ba1b66fe" />
+
+-----
+
 ### 4\. Update Mahasiswa
 
 Memperbarui data mahasiswa yang sudah ada berdasarkan ID.
@@ -208,6 +218,10 @@ curl -X PUT http://localhost:6543/api/mahasiswa/1 \
 }
 ```
 
+<img width="1204" height="344" alt="Screenshot 2025-12-08 193847" src="https://github.com/user-attachments/assets/4da0ec73-553d-413b-88ca-05be801c36d3" />
+
+-----
+
 ### 5\. Delete Mahasiswa
 
 Menghapus data mahasiswa berdasarkan ID.
@@ -225,6 +239,8 @@ curl -X DELETE http://localhost:6543/api/mahasiswa/3
   "message": "Mahasiswa deleted successfully"
 }
 ```
+
+<img width="1211" height="188" alt="Screenshot 2025-12-08 193954" src="https://github.com/user-attachments/assets/b9057379-cb1e-4f06-9589-ad43e1eaf5a6" />
 
 -----
 
