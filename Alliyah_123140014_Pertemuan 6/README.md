@@ -10,7 +10,6 @@ Teknologi yang digunakan:
 * **Database:** PostgreSQL
 * **ORM:** SQLAlchemy
 * **Migration:** Alembic
-* **Server:** Waitress / Pserve
 
 Fitur utama meliputi:
 * Melihat daftar semua mahasiswa.
@@ -28,21 +27,29 @@ Fitur utama meliputi:
 Pastikan Anda berada di direktori root proyek, lalu jalankan perintah berikut di terminal (PowerShell/CMD):
 
 ```bash
-# Membuat virtual environment
+# Buat virtual environment
 python -m venv venv
 
-# Mengaktifkan virtual environment (Windows)
-.\venv\Scripts\Activate
-````
+# Aktifkan virtual environment
+# Untuk Windows (Command Prompt)
+venv\Scripts\activate
+
+# Untuk Windows (Git Bash)
+source venv/Scripts/activate
+
+# Untuk Linux/MacOS
+source venv/bin/activate
+
+# Update pip ke versi terbaru
+python -m pip install --upgrade pip
+```
 
 ### Instalasi dependensi
 
 Setelah *virtual environment* aktif, instal paket-paket yang dibutuhkan:
 
 ```bash
-pip install --upgrade pip setuptools
-pip install -e .
-pip install pyramid sqlalchemy alembic psycopg2-binary pyramid_tm pyramid_retry pyramid_beaker zope.sqlalchemy
+pip install -e ".[testing]"
 ```
 
 ### Konfigurasi database
@@ -59,7 +66,7 @@ sqlalchemy.url = postgresql://username:password@localhost:5432/nama_database
 
 -----
 
-## 3\. Cara Menjalankan
+## 3. Cara Menjalankan
 
 ### Menjalankan migrasi
 
@@ -90,11 +97,11 @@ Aplikasi akan berjalan di `http://localhost:6543`.
 
 -----
 
-## 4\. API Endpoints
+## 4. API Endpoints
 
 Berikut adalah dokumentasi lengkap untuk setiap endpoint yang tersedia.
 
-### 1\. Get All Mahasiswa
+#### 1. Get All Mahasiswa
 
 Mengambil daftar semua data mahasiswa.
 
@@ -133,7 +140,7 @@ curl -X GET http://localhost:6543/api/mahasiswa
 
 -----
 
-### 2\. Get Mahasiswa By ID
+#### 2. Get Mahasiswa By ID
 
 Mengambil data detail satu mahasiswa berdasarkan ID.
 
@@ -160,7 +167,7 @@ curl -X GET http://localhost:6543/api/mahasiswa/1
 
 -----
 
-### 3\. Create New Mahasiswa
+#### 3. Create New Mahasiswa
 
 Menambahkan data mahasiswa baru ke dalam database.
 
@@ -192,7 +199,7 @@ curl -X POST http://localhost:6543/api/mahasiswa \
 
 -----
 
-### 4\. Update Mahasiswa
+#### 4. Update Mahasiswa
 
 Memperbarui data mahasiswa yang sudah ada berdasarkan ID.
 
@@ -220,7 +227,7 @@ curl -X PUT http://localhost:6543/api/mahasiswa/1 \
 
 -----
 
-### 5\. Delete Mahasiswa
+#### 5. Delete Mahasiswa
 
 Menghapus data mahasiswa berdasarkan ID.
 
@@ -242,31 +249,39 @@ curl -X DELETE http://localhost:6543/api/mahasiswa/3
 
 -----
 
-## 5\. Testing
+## 5. Testing
 
-Untuk pengujian cepat menggunakan terminal, Anda dapat menggunakan perintah `curl` seperti di atas.
+Berikut adalah contoh perintah untuk melakukan testing pada setiap endpoint menggunakan `curl`.
 
-Jika Anda menggunakan **PowerShell** (Windows), Anda dapat menggunakan perintah berikut sebagai pengganti `curl`:
+#### 1. Get All Data
+```bash
+curl -X GET http://localhost:6543/api/mahasiswa
+````
 
-**Contoh Get All Data (PowerShell):**
+#### 2. Get Data by ID
 
-```powershell
-Invoke-RestMethod -Method GET -Uri "http://localhost:6543/api/mahasiswa"
+```bash
+curl -X GET http://localhost:6543/api/mahasiswa/1
 ```
 
-**Contoh Create Data (PowerShell):**
+#### 3. Create Data (POST)
 
-```powershell
-$body = @{
-    nim = "99999"
-    nama = "Test User"
-    jurusan = "DKV"
-    tanggal_lahir = "2002-01-01"
-    alamat = "Jakarta"
-} | ConvertTo-Json
-
-Invoke-RestMethod -Method POST -Uri "http://localhost:6543/api/mahasiswa" -Headers @{"Content-Type"="application/json"} -Body $body
+```bash
+curl -X POST http://localhost:6543/api/mahasiswa \
+     -H "Content-Type: application/json" \
+     -d '{"nim": "10101", "nama": "Dewi", "jurusan": "Akuntansi", "tanggal_lahir": "2002-01-01", "alamat": "Jakarta"}'
 ```
 
+#### 4. Update Data (PUT)
+
+```bash
+curl -X PUT http://localhost:6543/api/mahasiswa/1 \
+     -H "Content-Type: application/json" \
+     -d '{"jurusan": "Sistem Informasi", "alamat": "Pindah ke Bandung"}'
 ```
+
+#### 5. Delete Data
+
+```bash
+curl -X DELETE http://localhost:6543/api/mahasiswa/1
 ```
