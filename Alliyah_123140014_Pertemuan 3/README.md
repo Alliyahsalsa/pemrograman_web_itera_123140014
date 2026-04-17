@@ -24,7 +24,7 @@ Pastikan sudah terinstall:
 ### Langkah Instalasi
 1. **Clone repository:**
 ```bash
-git clone https://github.com/7refi/my-react-app.git 
+git clone https://github.com/Alliyahsalsa/my-react-app.git 
 ````
 2. **Install dependencies:**
 ```bash
