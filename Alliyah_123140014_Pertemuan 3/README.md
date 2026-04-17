@@ -24,13 +24,21 @@ Pastikan sudah terinstall:
 ### Langkah Instalasi
 1. **Clone repository:**
 ```bash
-git clone https://github.com/Alliyahsalsa/my-react-app.git 
+git clone https://github.com/Alliyahsalsa/pemrograman_web_itera_123140014.git
 ````
-2. **Install dependencies:**
+2. **Masuk ke folder:**
+```bash
+cd pemrograman_web_itera_123140014
+```
+3. **Masuk ke folder Pertemuan 3:**
+```bash
+cd "Alliyah_123140014_Pertemuan 3"
+```
+4. **Install dependencies:**
 ```bash
 npm install
 ```
-3. **Jalankan aplikasi dalam mode development:**
+5. **Jalankan aplikasi dalam mode development:**
 ```bash
 npm start
 ````
